@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Random Equation Generator</title>
+		
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+
+<style>
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700);
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	background:#FFFFFF;
+	padding:10px;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 20px;
+	color: #000000;
+	height:100%;
+	position:relative;
+}
+.clear { clear:both; }
+#title {
+	font-size: 35px;
+	color:#000000;
+}
+#title span{
+	font-size:28px;
+	color:#333333;
+	margin-left:5px;
+}
+#option_left{
+	float:left;
+	width:300px;
+}
+#option_right{
+	float:right;
+	width:calc(100% - 300px);
+}
+#option_table{
+	width:300px;
+}
+#option_table tr th {
+	width:25%;
+}
+.option_input{
+	width:100%;
+	text-align:center;
+}
+#generate{
+	background-color:#EEEEEE;
+	margin-top:24px;
+	float:left;
+	cursor: pointer;
+}
+#output{
+	min-height: 50px;
+	border-width:1px;
+	border-style:solid;
+	border-color:#000000;
+}
+#output_solutions{
+	min-height: 500px;
+	border-width:1px;
+	border-style:solid;
+	border-color:#000000;
+}
+.output_sub{
+	padding-left:5px;
+}
+#output {
+	font-size:35px;
+}
+.correct {
+	color:#00FF00;
+}
+</style>
+<script type="text/javascript"src="./main.js"></script>
+<link rel="icon" 
+      type="image/png" 
+      href="./favicon.png">
+	</head>
+<body>
+<div id="title">Random Equation Generator<span>by HX2003</span></div>
+<br>
+<div id="option_area">
+<div id="option_left">
+<table id="option_table">
+<tr>
+<th>Num</th>
+<th>Min</th>
+<th>Max</th>
+<th>Skip</th>
+</tr>
+<tr>
+<td><input type="number" value="3" min="3" max="5" id="Option_Num" class="option_input"></input></td>
+<td><input type="number" value="0" min="0" max="100" id="Option_Min" class="option_input"></input></td>
+<td><input type="number" value="10" min="0" max="100" id="Option_Max" class="option_input"></input></td>
+<td><input type="number" value="10" min="0" max="100" id="Option_Skip" class="option_input"></input></td>
+</tr>
+</table>
+</div>
+<div id="option_right">
+<div id="generate">Generate</div>
+</div>
+</div>
+<div class="clear"></div>
+<hr>
+<div class="clear"></div>	
+<div id="output_container">
+<div id="output_title">Generated Equation</div>
+<div id="output"></div>
+<div id="output_title2">Generated Solution(s)</div>
+<div id="output_solutions"></div>
+</div>
+</body>
